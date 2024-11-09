@@ -583,7 +583,7 @@ ul.dropdown-menu li {
   max-width: 100%;
   color: #ffffff;
   text-align: center;
-  padding: 60px;
+  padding: 80px 0px;
   border-radius: 8px;
   z-index: 2; /* Ensures text is above the overlay */
   font-size: 1.5em;
