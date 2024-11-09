@@ -523,7 +523,12 @@ ul.dropdown-menu li {
 }
 
 .bg-2 {
-  background: url("../images/bg/home-5.jpg");
+  background: url("../images/bg/home-8.jpg");
+  background-size: cover;
+}
+
+.bg-3 {
+  background: url("../images/bg/home-4.jpg");
   background-size: cover;
 }
 
@@ -640,6 +645,11 @@ ul.dropdown-menu li {
 
 .about-content h4 {
   font-weight: 600;
+}
+
+.about-item-img {
+  position: relative;
+  padding: 25% 0px;
 }
 
 .about-content h4:before {
