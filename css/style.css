@@ -527,7 +527,7 @@ ul.dropdown-menu li {
   background-size: cover;
 }
 
-.slider {
+/* .slider {
   background: url("../images/bg/home-1.jpg") no-repeat;
   background-size: cover;
   background-position: 10% 0%;
@@ -552,7 +552,54 @@ ul.dropdown-menu li {
 
 .slider .block span {
   letter-spacing: 1px;
+} */
+.carousel-item {
+  height: 850px;
+  position: relative;
 }
+
+.carousel-item img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Adjust opacity and color as needed */
+  z-index: 1; /* Places the overlay above the image but below the text */
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  color: #ffffff;
+  text-align: center;
+  padding: 60px;
+  border-radius: 8px;
+  z-index: 2; /* Ensures text is above the overlay */
+  font-size: 1.5em;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  border-radius: 50%;
+  padding: 10px;
+}
+
 
 .intro-item i {
   font-size: 60px;
