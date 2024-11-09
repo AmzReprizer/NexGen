@@ -1497,22 +1497,22 @@ h2 {
 
 /* Home page client saying */
 
-.client-testimonials {
+.feedback-section {
   background-color: #FFFFFF;
   padding: 60px 20px;
   text-align: center;
-  margin-top: -100px;
+  margin-bottom: 50px;
 }
 
-.testimonial-container {
+.feedback-container {
   max-width: 1000px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap; /* Ensures the items wrap to the next line on smaller screens */
+  flex-wrap: wrap;
 }
 
-.client-testimonials h2 {
+.customer-feedback h2 {
   font-size: 2.5em;
   margin-bottom: 40px;
   color: #222328;
@@ -1520,8 +1520,7 @@ h2 {
   text-align: center;
 }
 
-/* Testimonial Cards */
-.testimonial {
+.feedback {
   background-color: #fff;
   padding: 20px;
   margin-bottom: 30px;
@@ -1529,19 +1528,18 @@ h2 {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   width: 100%;
-  max-width: 320px; /* Adjusted width for better fit */
+  max-width: 320px;
   margin-left: auto;
   margin-right: auto;
   text-align: left;
 }
 
-.testimonial:hover {
+.feedback:hover {
   transform: translateY(-10px);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 
-/* Star Rating */
-.rating {
+.review-rating {
   font-size: 1.5em;
   color: #ffd700;
   margin-bottom: 15px;
