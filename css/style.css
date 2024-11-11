@@ -388,15 +388,8 @@ a:focus {
 }
 
 #navbar {
-  position: fixed;
-  top: 40px;
-  left: 0;
-  right: 0;
-  z-index: 9999;
   background: #FFFFFF;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-  width: 100%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .main-wrapper {
@@ -427,17 +420,9 @@ a:focus {
 }
 
 .header-top {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 9998;
   background: #FFFFFF;
   color: #3b54a5;
   border-bottom: 1px solid #000000;
-  height: 40px;
-  display: flex;
-  align-items: center;
 }
 
 .header-top .header-top-socials {
@@ -558,8 +543,9 @@ ul.dropdown-menu li {
 .slider .block span {
   letter-spacing: 1px;
 } */
+
 .carousel-item {
-  height: 850px;
+  height: 100vh; /* Relative height to viewport */
   position: relative;
 }
 
@@ -576,8 +562,8 @@ ul.dropdown-menu li {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* Adjust opacity and color as needed */
-  z-index: 1; /* Places the overlay above the image but below the text */
+  background-color: rgba(0, 0, 0, 0.6); /* Darker overlay for better contrast */
+  z-index: 1; /* Places overlay above the image but below the text */
 }
 
 .carousel-caption {
@@ -585,18 +571,35 @@ ul.dropdown-menu li {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 100%;
+  max-width: 90%; /* Limits width for readability on smaller screens */
   color: #ffffff;
   text-align: center;
-  padding: 80px 0px;
-  border-radius: 8px;
+  padding: 20px;
   z-index: 2; /* Ensures text is above the overlay */
-  font-size: 1.5em;
+}
+
+.carousel-caption h1 {
+  font-size: 2rem; /* Starting font size */
+  font-weight: bold; /* Make the text bold */
+  color: #ffffff; /* White text */
+  line-height: 1.3; /* Improves readability */
+}
+
+@media (min-width: 768px) {
+  .carousel-caption h1 {
+    font-size: 2.8rem; /* Medium font size for tablets */
+  }
+}
+
+@media (min-width: 992px) {
+  .carousel-caption h1 {
+    font-size: 3.5rem; /* Larger font size for desktops */
+  }
 }
 
 .carousel-control-prev,
 .carousel-control-next {
-  width: 5%;
+  width: 8%; /* Increased width for smaller screens */
 }
 
 .carousel-control-prev-icon,
@@ -1242,7 +1245,6 @@ h3.quote::before {
 .widget {
   margin-bottom: 30px;
   padding-bottom: 35px;
-  width: 150%;
 }
 
 .widget .widget-title {
@@ -1559,6 +1561,95 @@ h2 {
   margin-right: 5px;
 }
 
+/* Container styling */
+.ceo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f4f6f9; /* Light background for simplicity */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* CEO Image */
+.ceo-image {
+  flex: 1;
+  max-width: 350px;
+  padding-right: 20px;
+}
+.ceo-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Quote Section */
+.ceo-quote {
+  flex: 2;
+  color: #333;
+}
+.ceo-quote h2 {
+  font-size: 1.6rem;
+  color: #3b54a5; /* Blue color */
+  margin-bottom: 15px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  letter-spacing: 1px;
+}
+.ceo-quote h2 i {
+  color: #65be61; /* Green color */
+  margin: 0 10px;
+}
+
+.ceo-quote .quote {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.ceo-quote .ceo-name {
+  font-size: 1.1rem;
+  color: #333;
+  text-align: center;
+  font-weight: bold;
+}
+
+.ceo-quote .ceo-title {
+  font-size: 1rem;
+  color: #777;
+  text-align: center;
+  font-weight: normal;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .ceo-container {
+      flex-direction: column;
+      padding: 20px;
+      text-align: center;
+  }
+
+  .ceo-image {
+      padding-right: 0;
+      margin-bottom: 20px;
+      max-width: 100%; /* Make image full-width on mobile */
+  }
+
+  .ceo-quote .ceo-name {
+      text-align: center;
+  }
+
+  .ceo-quote .ceo-title {
+      text-align: center;
+  }
+}
+
 /*=== MEDIA QUERY ===*/
 @media (max-width: 400px) {
   .header-top .header-top-info a {
@@ -1566,7 +1657,7 @@ h2 {
     display: block;
   }
   .navbar-toggler {
-    color: #fff;
+    color: #3b54a5;
   }
   .slider .block h1 {
     font-size: 28px;
@@ -1625,7 +1716,7 @@ h2 {
     margin-left: 0px;
   }
   .navbar-toggler {
-    color: #fff;
+    color: #3b54a5;
   }
   .slider .block h1 {
     font-size: 38px;
@@ -1676,7 +1767,7 @@ h2 {
 
 @media (max-width: 768px) {
   .navbar-toggler {
-    color: #fff;
+    color: #3b54a5;
   }
   .bg-about {
     display: none;
