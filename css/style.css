@@ -676,6 +676,15 @@ ul.dropdown-menu li {
   background-size: cover;
 }
 
+.team-item img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center top;
+}
+
 .team-img-hover .team-social li a.facebook {
   background: #6666cc;
 }
